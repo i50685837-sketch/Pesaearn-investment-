@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Investment</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#08111f,#1e1136);
+color:white;
+}
+
+.card{
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+input,select{
+background:#020617;
+border:1px solid #334155;
+color:white;
+}
+
+</style>
+
+</head>
+
+
+<body class="min-h-screen p-5">
+
+
+<!-- Header -->
+
+<div class="flex justify-between items-center mb-8">
+
+<a href="dashboard.html"
+class="text-green-400 font-bold">
+
+← Dashboard
+
+</a>
+
+
+<h1 class="text-2xl font-black">
+
+Invest 📈
+
+</h1>
+
+
+</div>
+
+
+
+
+
+<!-- Investment Card -->
+
+
+<div class="card max-w-xl mx-auto rounded-3xl p-8">
+
+
+<h2 class="text-2xl font-bold">
+
+Start Investment 🚀
+
+</h2>
+
+
+<p class="text-slate-400 mt-2">
+
+Minimum investment amount is KSh 650.
+
+</p>
+
+
+
+
+
+<form id="investmentForm"
+class="space-y-5 mt-6">
+
+
+
+
+
+<div>
+
+<label class="text-sm text-slate-400">
+
+Investment Amount (KSh)
+
+</label>
+
+
+<input
+
+id="amount"
+
+type="number"
+
+min="650"
+
+placeholder="Minimum KSh 650"
+
+required
+
+class="w-full mt-2 p-4 rounded-xl">
+
+
+</div>
+
+
+
+
+
+
+<div>
+
+<label class="text-sm text-slate-400">
+
+Investment Duration
+
+</label>
+
+
+<select id="duration"
+class="w-full mt-2 p-4 rounded-xl">
+
+
+<option value="3">
+
+3 Hours
+
+</option>
+
+
+<option value="12">
+
+12 Hours
+
+</option>
+
+
+<option value="24">
+
+24 Hours
+
+</option>
+
+
+<option value="48">
+
+48 Hours
+
+</option>
+
+
+<option value="72">
+
+72 Hours
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<button
+
+type="submit"
+
+class="w-full py-4 rounded-xl
+bg-gradient-to-r from-green-500 to-purple-600
+font-bold text-black">
+
+Start Investment ✅
+
+</button>
+
+
+
+
+</form>
+
+
+
+
+
+<p id="message"
+class="text-center mt-5 font-bold">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Calculator -->
+
+
+<div class="card max-w-xl mx-auto rounded-3xl p-8 mt-8">
+
+
+<h2 class="text-2xl font-bold">
+
+Investment Calculator 📊
+
+</h2>
+
+
+<input
+
+id="calcAmount"
+
+type="number"
+
+placeholder="Enter amount"
+
+class="w-full mt-5 p-4 rounded-xl">
+
+
+
+<button
+
+onclick="calculate()"
+
+class="mt-4 w-full bg-green-500 text-black py-3 rounded-xl font-bold">
+
+Calculate Return
+
+</button>
+
+
+<p id="result"
+class="text-green-400 mt-5 text-center font-bold">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+document
+.getElementById("investmentForm")
+.addEventListener("submit",function(e){
+
+
+e.preventDefault();
+
+
+
+let amount =
+Number(document.getElementById("amount").value);
+
+
+let duration =
+document.getElementById("duration").value;
+
+
+
+let message =
+document.getElementById("message");
+
+
+
+
+
+if(amount < 650){
+
+
+message.innerHTML =
+"Minimum investment is KSh 650 ❌";
+
+
+message.className="text-red-400";
+
+
+return;
+
+
+}
+
+
+
+
+
+localStorage.setItem(
+"investmentAmount",
+amount
+);
+
+
+localStorage.setItem(
+"investmentDuration",
+duration + " Hours"
+);
+
+
+
+
+
+message.innerHTML =
+"Investment started successfully ✅";
+
+
+message.className="text-green-400";
+
+
+
+
+
+setTimeout(()=>{
+
+window.location.href="wallet.html";
+
+},1500);
+
+
+
+});
+
+
+
+
+
+
+
+
+function calculate(){
+
+
+let amount =
+Number(document.getElementById("calcAmount").value);
+
+
+
+if(amount < 650){
+
+
+document.getElementById("result").innerHTML =
+"Minimum investment is KSh 650 ❌";
+
+
+return;
+
+}
+
+
+
+let profit =
+amount * 0.05;
+
+
+
+document.getElementById("result").innerHTML =
+
+"Estimated return: KSh " + profit.toFixed(2);
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

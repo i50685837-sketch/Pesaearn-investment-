@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Wallet</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#08111f,#1e1136);
+color:white;
+}
+
+.card{
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+</style>
+
+</head>
+
+
+<body class="min-h-screen p-5">
+
+
+<!-- Header -->
+
+<div class="flex justify-between items-center mb-8">
+
+
+<a href="dashboard.html"
+class="text-green-400 font-bold">
+
+← Dashboard
+
+</a>
+
+
+<h1 class="text-2xl font-black">
+
+Wallet 👛
+
+</h1>
+
+
+</div>
+
+
+
+
+<!-- Balance -->
+
+<div class="card rounded-3xl p-8">
+
+
+<p class="text-slate-400">
+
+Available Balance
+
+</p>
+
+
+<h2 id="balance"
+class="text-4xl font-black text-green-400 mt-3">
+
+KSh 0.00
+
+</h2>
+
+
+<div class="grid grid-cols-2 gap-4 mt-6">
+
+
+<a href="deposit.html"
+class="bg-green-500 text-black text-center p-4 rounded-xl font-bold">
+
+💳 Deposit
+
+</a>
+
+
+
+<a href="withdraw.html"
+class="bg-purple-600 text-white text-center p-4 rounded-xl font-bold">
+
+💸 Withdraw
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- Transactions -->
+
+
+<div class="card rounded-3xl p-6 mt-8">
+
+
+<h2 class="text-xl font-bold mb-5">
+
+Recent Transactions
+
+</h2>
+
+
+
+<div class="space-y-4">
+
+
+<div class="bg-slate-800 p-4 rounded-xl flex justify-between">
+
+
+<span>
+Account Created
+</span>
+
+
+<span class="text-green-400">
+
+Success
+
+</span>
+
+
+</div>
+
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl flex justify-between">
+
+
+<span>
+Investment
+</span>
+
+
+<span class="text-yellow-400">
+
+Pending
+
+</span>
+
+
+</div>
+
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl flex justify-between">
+
+
+<span>
+Withdrawal
+</span>
+
+
+<span class="text-slate-400">
+
+No activity
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- Wallet Menu -->
+
+
+<div class="card rounded-3xl p-6 mt-8">
+
+
+<h2 class="text-xl font-bold mb-5">
+
+Wallet Options
+
+</h2>
+
+
+
+<a href="history.html"
+class="block bg-slate-800 p-4 rounded-xl mb-3">
+
+🕒 Transaction History
+
+</a>
+
+
+
+<a href="invest.html"
+class="block bg-slate-800 p-4 rounded-xl mb-3">
+
+📈 Start Investing
+
+</a>
+
+
+
+<a href="support.html"
+class="block bg-slate-800 p-4 rounded-xl">
+
+💬 Wallet Support
+
+</a>
+
+
+</div>
+
+
+
+
+
+<script>
+
+let balance = localStorage.getItem("balance") || "0";
+
+document.getElementById("balance").innerHTML =
+"KSh " + balance + ".00";
+
+
+</script>
+
+
+
+</body>
+
+  </html>

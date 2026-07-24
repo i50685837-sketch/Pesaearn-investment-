@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Investment</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+linear-gradient(rgba(8,15,35,.88),rgba(8,15,35,.90)),
+url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+}
+
+@keyframes glow{
+
+0%,100%{
+box-shadow:0 0 15px rgba(34,197,94,.3);
+}
+
+50%{
+box-shadow:0 0 35px rgba(168,85,247,.7);
+}
+
+}
+
+.logo{
+
+animation:glow 3s infinite;
+
+}
+
+.card{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+.bar{
+
+animation:grow 2s infinite alternate;
+
+}
+
+@keyframes grow{
+
+from{
+
+transform:scaleY(.6);
+
+}
+
+to{
+
+transform:scaleY(1.1);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="fixed top-0 left-0 w-full z-50 bg-slate-900/70 backdrop-blur-xl border-b border-purple-500/20">
+
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+<div class="flex items-center gap-3">
+
+<div class="logo w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-green-500 flex items-center justify-center text-2xl font-black">
+
+P
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-black">
+
+Pesa<span class="text-green-400">earn</span>
+
+</h2>
+
+<p class="text-xs text-slate-400">
+
+Invest • Earn • Grow
+
+</p>
+
+</div>
+
+</div>
+
+<nav class="hidden md:flex gap-8 text-slate-300">
+
+<a href="#invest" class="hover:text-green-400 transition">
+
+Invest
+
+</a>
+
+<a href="#learn-more" class="hover:text-purple-400 transition">
+
+Learn More
+
+</a>
+
+<a href="#signup" class="hover:text-yellow-400 transition">
+
+Get Started
+
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="max-w-7xl mx-auto px-6 pt-40 pb-24">
+
+<div class="grid lg:grid-cols-2 gap-14 items-center">
+
+<div>
+
+<div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-500/10 border border-green-500/30">
+
+<span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+
+<span class="text-green-300 font-semibold">
+
+Trusted Investment Platform
+
+</span>
+
+</div>
+
+<h1 class="mt-8 text-5xl md:text-7xl font-black leading-tight">
+
+Invest
+
+<span class="text-green-400">
+
+Smarter
+
+</span>
+
+<br>
+
+Earn
+
+<span class="text-purple-400">
+
+Daily
+
+</span>
+
+</h1>
+
+<p class="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
+
+Grow your wealth through secure investments and paid surveys.
+Track your earnings in real time and withdraw quickly from your dashboard.
+
+</p>
+
+<div class="mt-10 flex flex-wrap gap-4">
+
+<a href="#signup"
+
+class="px-8 py-4 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 font-bold shadow-xl hover:scale-105 transition">
+
+Get Started
+
+</a>
+
+<a href="#learn-more"
+
+class="px-8 py-4 rounded-xl border border-purple-500 hover:bg-purple-500/20 transition">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+<!-- GRAPH -->
+
+<div class="flex justify-center">
+
+<div class="card bg-slate-900/80 rounded-3xl p-10 border border-purple-500/30 shadow-2xl">
+
+<div class="flex items-end gap-4 h-52">
+
+<div class="bar w-8 h-20 rounded bg-green-400"></div>
+
+<div class="bar w-8 h-28 rounded bg-green-500"></div>
+
+<div class="bar w-8 h-36 rounded bg-emerald-400"></div>
+
+<div class="bar w-8 h-44 rounded bg-purple-500"></div>
+
+<div class="bar w-8 h-52 rounded bg-pink-500"></div>
+
+</div>
+
+<div class="text-center mt-8">
+
+<i class="fa-solid fa-chart-line text-6xl text-green-400"></i>
+
+<h3 class="text-2xl font-bold mt-4">
+
+Investment Growth
+
+</h3>
+
+<p class="text-slate-400 mt-2">
+
+Watch your portfolio grow with every successful investment.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Part 2 starts here -->
+  <!-- ========================= -->
+<!-- PART 2 : LEARN MORE -->
+<!-- ========================= -->
+
+<section id="learn-more" class="py-24 px-6 bg-slate-950/80 backdrop-blur-xl">
+
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center">
+
+<h2 class="text-5xl font-black">
+Why Choose
+<span class="text-green-400">Pesaearn?</span>
+</h2>
+
+<p class="text-slate-300 mt-5 max-w-3xl mx-auto text-lg">
+Pesaearn is a platform where you can earn by investing in available plans and by completing paid surveys. Our goal is to provide a simple and secure experience with an easy-to-use dashboard.
+</p>
+
+</div>
+
+<!-- Features -->
+
+<div class="grid md:grid-cols-3 gap-8 mt-16">
+
+<div class="bg-slate-900 rounded-3xl p-8 border border-green-500/20 hover:border-green-400 transition">
+
+<div class="text-5xl text-green-400 mb-5">
+<i class="fa-solid fa-user-plus"></i>
+</div>
+
+<h3 class="text-2xl font-bold">
+1. Create Account
+</h3>
+
+<p class="text-slate-400 mt-4">
+Sign up using your Google account or your email address. Registration only takes a few minutes.
+</p>
+
+</div>
+
+<div class="bg-slate-900 rounded-3xl p-8 border border-purple-500/20 hover:border-purple-400 transition">
+
+<div class="text-5xl text-purple-400 mb-5">
+<i class="fa-solid fa-wallet"></i>
+</div>
+
+<h3 class="text-2xl font-bold">
+2. Invest
+</h3>
+
+<p class="text-slate-400 mt-4">
+Choose an investment plan, deposit funds into your wallet, and monitor your investment progress from your dashboard.
+</p>
+
+</div>
+
+<div class="bg-slate-900 rounded-3xl p-8 border border-yellow-500/20 hover:border-yellow-400 transition">
+
+<div class="text-5xl text-yellow-400 mb-5">
+<i class="fa-solid fa-money-bill-trend-up"></i>
+</div>
+
+<h3 class="text-2xl font-bold">
+3. Earn
+</h3>
+
+<p class="text-slate-400 mt-4">
+Receive investment returns, complete surveys for extra income, and request withdrawals from your wallet when available.
+</p>
+
+</div>
+
+</div>
+
+<!-- How to Invest -->
+
+<div class="mt-24">
+
+<h2 class="text-4xl font-black text-center">
+How to Start Investing
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6 mt-12">
+
+<div class="bg-green-500/10 rounded-2xl p-6 border border-green-500">
+
+<div class="text-4xl font-black text-green-400">
+01
+</div>
+
+<h4 class="mt-4 text-xl font-bold">
+Register
+</h4>
+
+<p class="text-slate-300 mt-3">
+Create your free account using Google or your email address.
+</p>
+
+</div>
+
+<div class="bg-purple-500/10 rounded-2xl p-6 border border-purple-500">
+
+<div class="text-4xl font-black text-purple-400">
+02
+</div>
+
+<h4 class="mt-4 text-xl font-bold">
+Verify
+</h4>
+
+<p class="text-slate-300 mt-3">
+Verify your email and complete your profile information.
+</p>
+
+</div>
+
+<div class="bg-blue-500/10 rounded-2xl p-6 border border-blue-500">
+
+<div class="text-4xl font-black text-blue-400">
+03
+</div>
+
+<h4 class="mt-4 text-xl font-bold">
+Deposit
+</h4>
+
+<p class="text-slate-300 mt-3">
+Add funds to your wallet and select the investment plan that suits you.
+</p>
+
+</div>
+
+<div class="bg-yellow-500/10 rounded-2xl p-6 border border-yellow-500">
+
+<div class="text-4xl font-black text-yellow-400">
+04
+</div>
+
+<h4 class="mt-4 text-xl font-bold">
+Earn
+</h4>
+
+<p class="text-slate-300 mt-3">
+Track your investment, complete surveys, and withdraw your earnings.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="text-center mt-16">
+
+<a href="#signup"
+class="inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-green-500 to-purple-600 font-bold hover:scale-105 transition">
+
+Create Free Account
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PART 3 STARTS HERE -->

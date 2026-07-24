@@ -548,4 +548,139 @@ Invest
 
 </div>
 
-<!-- ===== PART 4 STARTS HERE ===== -->
+<!-- ===== PART 4 STARTS HERE ===== --><!-- ========================================= -->
+<!-- PART 4 : FOOTER & JAVASCRIPT -->
+<!-- ========================================= -->
+
+<!-- Security Notice -->
+
+<div class="card rounded-3xl p-8 mt-10">
+
+    <div class="flex flex-col md:flex-row items-center gap-5">
+
+        <div class="w-16 h-16 rounded-2xl bg-green-500/20 flex items-center justify-center">
+
+            <i class="fas fa-shield-halved text-3xl text-green-400"></i>
+
+        </div>
+
+        <div>
+
+            <h2 class="text-xl font-bold">
+                Secure Wallet 🔒
+            </h2>
+
+            <p class="text-slate-400 mt-2">
+                Your wallet activity is protected. Always verify transactions before confirming deposits or withdrawals.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Support Card -->
+
+<div class="card rounded-3xl p-8 mt-8">
+
+    <h2 class="text-2xl font-bold">
+        Need Help?
+    </h2>
+
+    <p class="text-slate-400 mt-3">
+        Contact Pesaearn support for wallet, deposit and withdrawal assistance.
+    </p>
+
+    <a href="mailto:pesaearninvestment@gmail.com"
+    class="block mt-6 bg-green-500 hover:bg-green-600 text-black text-center rounded-xl py-3 font-bold">
+
+        📧 pesaearninvestment@gmail.com
+
+    </a>
+
+</div>
+
+
+<!-- Footer -->
+
+<footer class="mt-12 border-t border-slate-800 pt-8 pb-6">
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <p class="text-slate-500 text-sm">
+
+            © 2026 Pesaearn Investment. All Rights Reserved.
+
+        </p>
+
+
+        <div class="flex gap-6 text-slate-400 text-sm">
+
+            <a href="about.html" class="hover:text-green-400">
+                About
+            </a>
+
+            <a href="privacy.html" class="hover:text-green-400">
+                Privacy
+            </a>
+
+            <a href="terms.html" class="hover:text-green-400">
+                Terms
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</div>
+
+
+<!-- ========================================= -->
+<!-- WALLET MENU SCRIPT -->
+<!-- ========================================= -->
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+
+menuBtn.addEventListener("click",()=>{
+
+    mobileMenu.style.right="0";
+
+});
+
+
+closeMenu.addEventListener("click",()=>{
+
+    mobileMenu.style.right="-100%";
+
+});
+
+
+// Example wallet balance update ready for backend
+
+function updateWallet(balance){
+
+    document.getElementById("walletBalance").innerHTML =
+    "KSh " + Number(balance).toLocaleString();
+
+}
+
+
+// Example:
+// updateWallet(2500);
+
+
+</script>
+
+
+</body>
+</html>

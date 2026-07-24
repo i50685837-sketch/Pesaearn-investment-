@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Surveys</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#08111f,#1e1136);
+color:white;
+}
+
+.card{
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+</style>
+
+</head>
+
+
+<body class="min-h-screen p-5">
+
+
+
+<div class="flex justify-between items-center mb-8">
+
+<a href="dashboard.html"
+class="text-green-400 font-bold">
+
+← Dashboard
+
+</a>
+
+
+<h1 class="text-2xl font-black">
+
+Surveys 📋
+
+</h1>
+
+</div>
+
+
+
+
+
+<!-- Points -->
+
+<div class="card rounded-3xl p-6 mb-8">
+
+<p class="text-slate-400">
+
+Reward Points
+
+</p>
+
+
+<h2 id="points"
+class="text-4xl font-black text-green-400">
+
+0 Points
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="grid md:grid-cols-2 gap-6">
+
+
+
+<!-- Survey 1 -->
+
+<div class="card rounded-3xl p-6">
+
+<h2 class="text-xl font-bold">
+Technology Survey 💻
+</h2>
+
+<p class="text-slate-400 mt-3">
+Tell us about your technology experience.
+</p>
+
+<p class="text-green-400 mt-3 font-bold">
+Reward: 50 Points
+</p>
+
+
+<a href="take-survey.html?reward=50"
+class="block text-center mt-5 bg-green-500 text-black py-3 rounded-xl font-bold">
+
+Start Survey 🚀
+
+</a>
+
+</div>
+
+
+
+
+
+<!-- Survey 2 -->
+
+<div class="card rounded-3xl p-6">
+
+<h2 class="text-xl font-bold">
+Shopping Survey 🛒
+</h2>
+
+<p class="text-slate-400 mt-3">
+Share your shopping experience.
+</p>
+
+<p class="text-green-400 mt-3 font-bold">
+Reward: 100 Points
+</p>
+
+
+<a href="take-survey.html?reward=100"
+class="block text-center mt-5 bg-purple-600 py-3 rounded-xl font-bold">
+
+Start Survey 🚀
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+<!-- Survey 3 -->
+
+<div class="card rounded-3xl p-6">
+
+<h2 class="text-xl font-bold">
+Finance Survey 💰
+</h2>
+
+<p class="text-slate-400 mt-3">
+Your opinion about financial services.
+</p>
+
+<p class="text-green-400 mt-3 font-bold">
+Reward: 150 Points
+</p>
+
+
+<a href="take-survey.html?reward=150"
+class="block text-center mt-5 bg-blue-600 py-3 rounded-xl font-bold">
+
+Start Survey 🚀
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+<!-- Survey 4 -->
+
+<div class="card rounded-3xl p-6">
+
+<h2 class="text-xl font-bold">
+Lifestyle Survey 🌍
+</h2>
+
+<p class="text-slate-400 mt-3">
+Daily activities and interests.
+</p>
+
+<p class="text-green-400 mt-3 font-bold">
+Reward: 75 Points
+</p>
+
+
+<a href="take-survey.html?reward=75"
+class="block text-center mt-5 bg-yellow-500 text-black py-3 rounded-xl font-bold">
+
+Start Survey 🚀
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Survey 5 -->
+
+<div class="card rounded-3xl p-6">
+
+<h2 class="text-xl font-bold">
+Education Survey 🎓
+</h2>
+
+<p class="text-slate-400 mt-3">
+Learning and education feedback.
+</p>
+
+<p class="text-green-400 mt-3 font-bold">
+Reward: 120 Points
+</p>
+
+
+<a href="take-survey.html?reward=120"
+class="block text-center mt-5 bg-red-500 py-3 rounded-xl font-bold">
+
+Start Survey 🚀
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Survey 6 -->
+
+<div class="card rounded-3xl p-6">
+
+<h2 class="text-xl font-bold">
+Entertainment Survey 🎬
+</h2>
+
+<p class="text-slate-400 mt-3">
+Movies, music and entertainment.
+</p>
+
+<p class="text-green-400 mt-3 font-bold">
+Reward: 80 Points
+</p>
+
+
+<a href="take-survey.html?reward=80"
+class="block text-center mt-5 bg-pink-500 py-3 rounded-xl font-bold">
+
+Start Survey 🚀
+
+</a>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+// Reset starting points to zero
+
+if(!localStorage.getItem("pointsStarted")){
+
+localStorage.setItem("points","0");
+
+localStorage.setItem("pointsStarted","true");
+
+}
+
+
+let points =
+Number(localStorage.getItem("points") || 0);
+
+
+
+document.getElementById("points").innerHTML =
+points + " Points";
+
+
+</script>
+
+
+</body>
+
+</html>

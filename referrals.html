@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Referrals</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#08111f,#1e1136);
+color:white;
+}
+
+.card{
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+input{
+background:#020617;
+border:1px solid #334155;
+color:white;
+}
+
+</style>
+
+</head>
+
+
+<body class="min-h-screen p-5">
+
+
+<div class="flex justify-between items-center mb-8">
+
+
+<a href="dashboard.html"
+class="text-green-400 font-bold">
+
+← Dashboard
+
+</a>
+
+
+<h1 class="text-2xl font-black">
+
+Referrals 👥
+
+</h1>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card max-w-xl mx-auto rounded-3xl p-8">
+
+
+
+<h2 class="text-2xl font-bold">
+
+Invite Friends 🚀
+
+</h2>
+
+
+<p class="text-slate-400 mt-2">
+
+Earn rewards when people join using your referral code.
+
+</p>
+
+
+
+
+
+
+
+<div class="mt-6">
+
+
+<label class="text-slate-400">
+
+Your Referral Code
+
+</label>
+
+
+<input id="code"
+
+readonly
+
+class="w-full mt-2 p-4 rounded-xl">
+
+
+</div>
+
+
+
+
+
+
+
+<button onclick="copyCode()"
+
+class="mt-5 w-full bg-green-500 text-black py-4 rounded-xl font-bold">
+
+Copy Referral Code 📋
+
+</button>
+
+
+
+
+
+
+
+
+<div class="mt-8 space-y-4">
+
+
+
+<div class="bg-slate-800 p-5 rounded-xl flex justify-between">
+
+<span>
+👥 Friends Invited
+</span>
+
+
+<span id="friends"
+class="text-green-400 font-bold">
+
+0
+
+</span>
+
+</div>
+
+
+
+
+
+<div class="bg-slate-800 p-5 rounded-xl flex justify-between">
+
+<span>
+🎁 Referral Rewards
+</span>
+
+
+<span id="earnings"
+class="text-green-400 font-bold">
+
+KSh 0
+
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<button onclick="shareReferral()"
+
+class="mt-8 w-full bg-purple-600 py-4 rounded-xl font-bold">
+
+Share Invite Link 🔗
+
+</button>
+
+
+
+<p id="message"
+class="text-center mt-5 text-green-400 font-bold">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+// Create referral code
+
+let referralCode =
+localStorage.getItem("referralCode");
+
+
+
+if(!referralCode){
+
+
+referralCode =
+"PESA" + Math.floor(Math.random()*90000+10000);
+
+
+localStorage.setItem(
+"referralCode",
+referralCode
+);
+
+
+}
+
+
+
+
+document.getElementById("code").value =
+referralCode;
+
+
+
+
+
+document.getElementById("friends").innerHTML =
+localStorage.getItem("friends") || 0;
+
+
+
+document.getElementById("earnings").innerHTML =
+"KSh " + (localStorage.getItem("referralEarnings") || 0);
+
+
+
+
+
+
+
+
+function copyCode(){
+
+
+navigator.clipboard.writeText(referralCode);
+
+
+
+document.getElementById("message").innerHTML =
+"Referral code copied ✅";
+
+
+}
+
+
+
+
+
+
+
+function shareReferral(){
+
+
+let link =
+window.location.origin +
+"/register.html?ref=" +
+referralCode;
+
+
+
+navigator.clipboard.writeText(link);
+
+
+
+document.getElementById("message").innerHTML =
+"Referral link copied ✅";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

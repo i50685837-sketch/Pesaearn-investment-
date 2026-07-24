@@ -210,4 +210,164 @@ KSh 0.00
 
 </div>
 
-<!-- ===== PART 2 STARTS HERE ===== -->
+<!-- ===== PART 2 STARTS HERE ===== --><!-- ========================================= -->
+<!-- PART 2 : DEPOSIT & WITHDRAW ACTIONS -->
+<!-- ========================================= -->
+
+<div class="grid lg:grid-cols-2 gap-8 mt-10">
+
+    <!-- Deposit Card -->
+
+    <div class="card rounded-3xl p-8">
+
+        <div class="flex items-center gap-4">
+
+            <div class="w-16 h-16 rounded-2xl bg-green-500/20 flex items-center justify-center">
+
+                <i class="fas fa-arrow-down text-3xl text-green-400"></i>
+
+            </div>
+
+            <div>
+
+                <h2 class="text-2xl font-bold">
+                    Deposit Funds
+                </h2>
+
+                <p class="text-slate-400">
+                    Add money to your Pesaearn wallet.
+                </p>
+
+            </div>
+
+        </div>
+
+        <form action="deposit.html" class="mt-8 space-y-5">
+
+            <div>
+
+                <label class="text-sm text-slate-400">
+                    Amount (KSh)
+                </label>
+
+                <input
+                type="number"
+                min="50"
+                placeholder="Enter amount"
+                class="w-full mt-2 bg-slate-900 border border-slate-700 rounded-xl p-4 focus:border-green-500 outline-none">
+
+            </div>
+
+            <button
+            class="w-full bg-green-500 hover:bg-green-600 rounded-xl py-4 font-bold">
+
+                Continue Deposit
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Withdraw Card -->
+
+    <div class="card rounded-3xl p-8">
+
+        <div class="flex items-center gap-4">
+
+            <div class="w-16 h-16 rounded-2xl bg-red-500/20 flex items-center justify-center">
+
+                <i class="fas fa-money-bill-wave text-3xl text-red-400"></i>
+
+            </div>
+
+            <div>
+
+                <h2 class="text-2xl font-bold">
+                    Withdraw Funds
+                </h2>
+
+                <p class="text-slate-400">
+                    Transfer money from your wallet.
+                </p>
+
+            </div>
+
+        </div>
+
+        <form action="withdraw.html" class="mt-8 space-y-5">
+
+            <div>
+
+                <label class="text-sm text-slate-400">
+                    Amount (KSh)
+                </label>
+
+                <input
+                type="number"
+                min="100"
+                placeholder="Enter amount"
+                class="w-full mt-2 bg-slate-900 border border-slate-700 rounded-xl p-4 focus:border-red-500 outline-none">
+
+            </div>
+
+            <button
+            class="w-full bg-red-500 hover:bg-red-600 rounded-xl py-4 font-bold">
+
+                Request Withdrawal
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Quick Wallet Actions -->
+
+<h2 class="text-2xl font-bold mt-10 mb-6">
+Quick Wallet Actions
+</h2>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+<a href="deposit.html"
+class="bg-green-500 hover:bg-green-600 rounded-2xl p-6 text-center font-bold transition">
+
+<i class="fas fa-plus-circle text-3xl mb-3 block"></i>
+
+Deposit
+
+</a>
+
+<a href="withdraw.html"
+class="bg-red-500 hover:bg-red-600 rounded-2xl p-6 text-center font-bold transition">
+
+<i class="fas fa-money-bill-wave text-3xl mb-3 block"></i>
+
+Withdraw
+
+</a>
+
+<a href="history.html"
+class="bg-blue-600 hover:bg-blue-700 rounded-2xl p-6 text-center font-bold transition">
+
+<i class="fas fa-clock-rotate-left text-3xl mb-3 block"></i>
+
+History
+
+</a>
+
+<a href="invest.html"
+class="bg-purple-600 hover:bg-purple-700 rounded-2xl p-6 text-center font-bold transition">
+
+<i class="fas fa-chart-line text-3xl mb-3 block"></i>
+
+Invest
+
+</a>
+
+</div>
+
+<!-- ===== PART 3 STARTS HERE ===== -->

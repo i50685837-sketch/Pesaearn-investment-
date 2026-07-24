@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Rewards</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#08111f,#1e1136);
+color:white;
+}
+
+.card{
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+</style>
+
+</head>
+
+
+<body class="min-h-screen p-5">
+
+
+
+<div class="flex justify-between items-center mb-8">
+
+
+<a href="dashboard.html"
+class="text-green-400 font-bold">
+
+← Dashboard
+
+</a>
+
+
+<h1 class="text-2xl font-black">
+
+Rewards 🎁
+
+</h1>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Points Balance -->
+
+
+<div class="card rounded-3xl p-8">
+
+
+<p class="text-slate-400">
+
+Your Reward Points
+
+</p>
+
+
+<h2 id="points"
+
+class="text-4xl font-black text-green-400 mt-3">
+
+0 Points
+
+</h2>
+
+
+
+<button onclick="redeem()"
+
+class="mt-6 w-full bg-green-500 text-black py-4 rounded-xl font-bold">
+
+Redeem Points 🚀
+
+</button>
+
+
+<p id="message"
+class="text-center mt-4 font-bold">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Rewards History -->
+
+
+<div class="card rounded-3xl p-6 mt-8">
+
+
+<h2 class="text-xl font-bold mb-5">
+
+Reward History
+
+</h2>
+
+
+
+
+<div class="space-y-4">
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl">
+
+📋 Survey Completed
+
+<span class="text-green-400">
+
++50 Points
+
+</span>
+
+</div>
+
+
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl">
+
+🎯 Bonus Reward
+
+<span class="text-green-400">
+
++100 Points
+
+</span>
+
+</div>
+
+
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl">
+
+⭐ Achievement
+
+<span class="text-green-400">
+
++25 Points
+
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+let points =
+Number(localStorage.getItem("points") || 0);
+
+
+
+document.getElementById("points").innerHTML =
+points + " Points";
+
+
+
+
+
+
+
+function redeem(){
+
+
+if(points <= 0){
+
+
+document.getElementById("message").innerHTML =
+"No points available ❌";
+
+
+document.getElementById("message").className =
+"text-red-400 text-center mt-4 font-bold";
+
+
+return;
+
+}
+
+
+
+
+
+let investment =
+Number(localStorage.getItem("investmentAmount") || 0);
+
+
+
+
+// Add points to investment
+
+investment += points;
+
+
+
+localStorage.setItem(
+"investmentAmount",
+investment
+);
+
+
+
+// Reset points
+
+localStorage.setItem(
+"points",
+0
+);
+
+
+
+document.getElementById("points").innerHTML =
+"0 Points";
+
+
+
+document.getElementById("message").innerHTML =
+"Points redeemed successfully ✅";
+
+
+document.getElementById("message").className =
+"text-green-400 text-center mt-4 font-bold";
+
+
+
+points = 0;
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+  </html>

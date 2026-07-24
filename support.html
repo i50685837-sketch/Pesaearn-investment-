@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Support</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#08111f,#1e1136);
+color:white;
+}
+
+.card{
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+
+textarea,input{
+background:#020617;
+border:1px solid #334155;
+color:white;
+}
+
+</style>
+
+</head>
+
+
+
+<body class="min-h-screen p-5">
+
+
+
+
+
+<div class="flex justify-between items-center mb-8">
+
+
+<a href="dashboard.html"
+class="text-green-400 font-bold">
+
+← Dashboard
+
+</a>
+
+
+<h1 class="text-2xl font-black">
+
+Support 🆘
+
+</h1>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="max-w-xl mx-auto space-y-6">
+
+
+
+
+
+<!-- Contact -->
+
+<div class="card rounded-3xl p-8">
+
+
+<h2 class="text-2xl font-bold">
+
+Contact Support
+
+</h2>
+
+
+<p class="text-slate-400 mt-3">
+
+Need help? Send us your message.
+
+</p>
+
+
+<p class="text-green-400 mt-4 font-bold">
+
+📧 pesaearninvestment@gmail.com
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Message Form -->
+
+<div class="card rounded-3xl p-8">
+
+
+<h2 class="text-xl font-bold">
+
+Send Message 💬
+
+</h2>
+
+
+
+
+<form id="supportForm"
+class="mt-5 space-y-4">
+
+
+
+<input
+
+id="subject"
+
+placeholder="Subject"
+
+class="w-full p-4 rounded-xl"
+
+required>
+
+
+
+<textarea
+
+id="message"
+
+rows="5"
+
+placeholder="Describe your issue..."
+
+class="w-full p-4 rounded-xl"
+
+required></textarea>
+
+
+
+
+<button
+
+class="w-full bg-green-500 text-black py-4 rounded-xl font-bold">
+
+Send Request ✅
+
+</button>
+
+
+
+</form>
+
+
+
+
+<p id="result"
+class="text-center mt-4 text-green-400 font-bold">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- FAQ -->
+
+<div class="card rounded-3xl p-8">
+
+
+<h2 class="text-xl font-bold mb-5">
+
+Frequently Asked Questions
+
+</h2>
+
+
+
+<div class="space-y-4">
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl">
+
+<b>How do I invest?</b>
+
+<p class="text-slate-400 text-sm mt-2">
+
+Go to Invest and choose your amount.
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl">
+
+<b>How do surveys work?</b>
+
+<p class="text-slate-400 text-sm mt-2">
+
+Complete surveys and receive reward points.
+
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="bg-slate-800 p-4 rounded-xl">
+
+<b>How do I withdraw?</b>
+
+<p class="text-slate-400 text-sm mt-2">
+
+Open Wallet and submit a withdrawal request.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+document
+.getElementById("supportForm")
+.addEventListener("submit",function(e){
+
+
+e.preventDefault();
+
+
+
+let requests =
+JSON.parse(localStorage.getItem("supportRequests") || "[]");
+
+
+
+requests.push({
+
+subject:
+document.getElementById("subject").value,
+
+message:
+document.getElementById("message").value,
+
+date:
+new Date().toLocaleString()
+
+});
+
+
+
+localStorage.setItem(
+"supportRequests",
+JSON.stringify(requests)
+);
+
+
+
+document.getElementById("result").innerHTML =
+"Message sent successfully ✅";
+
+
+
+this.reset();
+
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+  </html>

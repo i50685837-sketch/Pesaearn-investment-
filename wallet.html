@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesaearn Wallet</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#08111f;
+color:white;
+overflow-x:hidden;
+}
+
+.card{
+background:rgba(15,23,42,.9);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#10b981;
+}
+
+#mobileMenu{
+transition:.35s;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Mobile Menu -->
+
+<div id="mobileMenu"
+class="fixed top-0 right-[-100%] w-80 h-screen bg-slate-950 z-50 p-6 overflow-y-auto">
+
+<div class="flex justify-between items-center">
+
+<h2 class="text-2xl font-bold text-green-400">
+Menu
+</h2>
+
+<button id="closeMenu">
+<i class="fas fa-times text-3xl"></i>
+</button>
+
+</div>
+
+<nav class="space-y-3 mt-8">
+
+<a href="dashboard.html" class="block p-4 rounded-xl hover:bg-slate-800">
+🏠 Dashboard
+</a>
+
+<a href="wallet.html" class="block p-4 rounded-xl bg-green-600 font-bold">
+👛 Wallet
+</a>
+
+<a href="deposit.html" class="block p-4 rounded-xl hover:bg-slate-800">
+💳 Deposit
+</a>
+
+<a href="withdraw.html" class="block p-4 rounded-xl hover:bg-slate-800">
+💸 Withdraw
+</a>
+
+<a href="invest.html" class="block p-4 rounded-xl hover:bg-slate-800">
+📈 Invest
+</a>
+
+<a href="survey.html" class="block p-4 rounded-xl hover:bg-slate-800">
+📋 Surveys
+</a>
+
+<a href="history.html" class="block p-4 rounded-xl hover:bg-slate-800">
+🕒 History
+</a>
+
+<a href="profile.html" class="block p-4 rounded-xl hover:bg-slate-800">
+👤 Profile
+</a>
+
+<a href="settings.html" class="block p-4 rounded-xl hover:bg-slate-800">
+⚙️ Settings
+</a>
+
+<a href="login.html" class="block p-4 rounded-xl bg-red-600 text-center">
+🚪 Logout
+</a>
+
+</nav>
+
+</div>
+
+<div class="max-w-7xl mx-auto p-6">
+
+<!-- Top Bar -->
+
+<div class="flex justify-between items-center mb-8">
+
+<div>
+
+<h1 class="text-4xl font-black">
+Wallet
+</h1>
+
+<p class="text-slate-400">
+Manage your money securely.
+</p>
+
+</div>
+
+<button id="menuBtn"
+class="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-purple-600 lg:hidden">
+
+<i class="fas fa-bars text-black text-xl"></i>
+
+</button>
+
+</div>
+
+<!-- Wallet Balance -->
+
+<div class="card rounded-3xl p-8 bg-gradient-to-r from-green-600 to-purple-600">
+
+<p class="text-green-100">
+Available Balance
+</p>
+
+<h2 id="walletBalance"
+class="text-5xl font-black mt-3">
+
+KSh 0.00
+
+</h2>
+
+<p class="mt-3 text-green-100">
+Your earnings, deposits and investment returns will appear here.
+</p>
+
+</div>
+
+<!-- Quick Summary -->
+
+<div class="grid md:grid-cols-3 gap-6 mt-8">
+
+<div class="card rounded-2xl p-6">
+
+<i class="fas fa-arrow-down text-3xl text-green-400 mb-4"></i>
+
+<h3 class="text-xl font-bold">
+Total Deposits
+</h3>
+
+<p class="text-3xl font-black text-green-400 mt-3">
+KSh 0.00
+</p>
+
+</div>
+
+<div class="card rounded-2xl p-6">
+
+<i class="fas fa-arrow-up text-3xl text-red-400 mb-4"></i>
+
+<h3 class="text-xl font-bold">
+Total Withdrawals
+</h3>
+
+<p class="text-3xl font-black text-red-400 mt-3">
+KSh 0.00
+</p>
+
+</div>
+
+<div class="card rounded-2xl p-6">
+
+<i class="fas fa-chart-line text-3xl text-purple-400 mb-4"></i>
+
+<h3 class="text-xl font-bold">
+Investment Profit
+</h3>
+
+<p class="text-3xl font-black text-purple-400 mt-3">
+KSh 0.00
+</p>
+
+</div>
+
+</div>
+
+<!-- ===== PART 2 STARTS HERE ===== -->

@@ -71,3 +71,20 @@ module.exports = {
   registerIPN,
   getIPNList
 };
+
+async function submitOrder(orderData) {
+  const token = accessToken || await getAccessToken();
+
+  const response = await axios.post(
+    `${config.baseUrl}/Transactions/SubmitOrderRequest`,
+    orderData,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      }
+    }
+  );
+
+  return response.data;
+}
